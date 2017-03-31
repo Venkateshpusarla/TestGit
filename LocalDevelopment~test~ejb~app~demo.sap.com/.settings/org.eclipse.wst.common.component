@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="LocalDevelopment~test~ejb~app~demo.sap.com">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="LocalDevelopment~test~ejb~demo.sap.com.jar" deploy-path="/" handle="module:/resource/LocalDevelopment~test~ejb~demo.sap.com/LocalDevelopment~test~ejb~demo.sap.com">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

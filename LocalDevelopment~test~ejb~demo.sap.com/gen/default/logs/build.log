@@ -1,0 +1,115 @@
+Development Component Build (2017-03-31 15:35:46 GMT+05:30 (IST))
+  Component name: test/ejb
+  Component vendor: demo.sap.com
+  SC compartment: MyComponents
+  Configuration: LocalDevelopment
+  Location: localDevelopment
+  Source code location: user@user-PC
+  DC root folder: E:\softwares\EXPC.jdi\LocalDevelopment\DCs\demo.sap.com\test\ejb\_comp\
+  DC type: J2EE
+  DC subtype: EJBModule
+  Host: user-PC
+
+DC Model check:
+   DC is available locally
+   validating dependency to build plugin "sap.com/tc/bi/bp/ejbmodule"
+   validating dependency to  public part "api" of DC "sap.com/engine.jee5.facade"
+   DC model check OK
+
+Start build plugin:
+   using build plugin: sap.com/tc/bi/bp/ejbmodule
+   starting build plugin from : E:\softwares\EXPC.jdi\LocalDevelopment\SAP_BUILDT\sap.com\tc\bi\bp\ejbmodule\_comp\gen\default\public\ejb\
+
+
+
+Build Plugin 'EJBModulePlugin', Version 7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:07:29 +0100, CL212848)
+   development component:  test/ejb (demo.sap.com)
+      software component:  MyComponents (demo.sap.com)
+                location:  localDevelopment
+                    type:  J2EE, subtype EJBModule
+           build variant:  default
+         source location:  user@user-PC
+         output location:  E:\softwares\EXPC.jdi\LocalDevelopment\t2\F0B6AC4FF1CBF542E5FDF29E074427F8\default
+       generation folder:  E:\softwares\EXPC.jdi\LocalDevelopment\t\F0B6AC4FF1CBF542E5FDF29E074427F8
+       plugin start time:  2017-03-31 15:35:46 GMT+05:30 (IST)
+                 Java VM:  Java HotSpot(TM) 64-Bit Server VM, 25.91-b15 (1.8, Oracle Corporation)
+
+
+General options:
+  convert *.xlf to *.properties: yes
+  include sources for debugging: yes
+ 
+
+
+Package folder ".apt_generated" exists but is empty and will be ignored.
+Checking path lengths for sources
+Path length checks finished in 0.001 seconds
+ 
+Preparing data context..
+Using custom manifest file "ejbModule/META-INF/MANIFEST.MF"
+Data context preparation finished in 0.022 seconds
+ 
+Creating Ant build file..
+  Creating output file: E:\softwares\EXPC.jdi\LocalDevelopment\t2\F0B6AC4FF1CBF542E5FDF29E074427F8\default\logs\build.xml
+  Using Java class:     com.sap.tc.buildplugin.BuildEJBModule
+Build file creation finished in 0.066 seconds
+ 
+Starting Ant..
+  Using build file:     E:\softwares\EXPC.jdi\LocalDevelopment\t2\F0B6AC4FF1CBF542E5FDF29E074427F8\default\logs\build.xml
+  Using build target:   build
+  Using Ant version:    1.7.1
+ 
+compile:
+      [echo] Starting Java compiler using the current JVM
+      [echo] Settings:
+      [echo]         debug: on
+      [echo]      optimize: off
+      [echo]   deprecation: default
+      [echo]       verbose: default
+      [echo]      encoding: UTF-8
+      [echo]        source: default
+      [echo]        target: default
+      [echo]   source path: E:\softwares\EXPC.jdi\LocalDevelopment\DCs\demo.sap.com\test\ejb\_comp\ejbModule
+      [echo]    class path:
+      [echo]       E:\softwares\EXPC.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\ec~java~jsf~api.jar
+      [echo]       E:\softwares\EXPC.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\engine.jee5.facade.jar
+      [echo]       E:\softwares\EXPC.jdi\LocalDevelopment\ENGFACADE\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\orpersistence_client_lib_filtered.jar
+      [echo]    output dir: E:\softwares\EXPC.jdi\LocalDevelopment\t\F0B6AC4FF1CBF542E5FDF29E074427F8\classes
+     [javac] Compiling 2 source files to E:\softwares\EXPC.jdi\LocalDevelopment\t\F0B6AC4FF1CBF542E5FDF29E074427F8\classes
+     [timer] Java compilation finished in 2.934 seconds
+ 
+      [echo] Start XLF conversion
+  [xlf2prop] Found 0 XLF files to convert in folder "ejbModule"
+     [timer] XLF conversion finished in 0.003 seconds
+ 
+ 
+createPublicParts:
+  [pppacker] Packing public part 'client'
+  [pppacker] Packed   2 files for entity TestBean (Java Class/Class, com/test/)
+  [pppacker] Packed   2 files for entity TestBeanLocal (Java Class/Class, com/test/)
+  [pppacker] Packed 2 entities for public part 'client'
+     [timer] Packing of public part 'client' finished in 0.049 seconds
+ 
+  [pppacker] Packing public part 'ejbjar'
+  [pppacker] Packed   7 files for entity demo.sap.com~test~ejb (EJB-JAR)
+  [pppacker] Packed 1 entity for public part 'ejbjar'
+     [timer] Packing of public part 'ejbjar' finished in 0.077 seconds
+ 
+ 
+build:
+ 
+Ant runtime 3.1 seconds
+ 
+Ant build finished OK
+ 
+Build plugin finished at 2017-03-31 15:35:49 GMT+05:30 (IST)
+Total build plugin runtime: 3.345 seconds
+ 
+Build finished with WARNING
+
+==== Post-Processing ====   started at 2017-03-31 15:35:49.992 IST
+Comparison of previous and actual build results took: 0.058 seconds
+
+Copy the build results 
+  from: E:\softwares\EXPC.jdi\LocalDevelopment\t2\F0B6AC4FF1CBF542E5FDF29E074427F8\default\
+  to:   E:\softwares\EXPC.jdi\LocalDevelopment\DCs\demo.sap.com\test\ejb\_comp\gen\default\

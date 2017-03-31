@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: test/ejb/app
+                   vendor: demo.sap.com
+                     type: J2EE
+                 sub-type: Enterprise Application
+              type-vendor: sap.com
+
+       software component
+                     name: MyComponents
+                   vendor: demo.sap.com
+
+                 location: localDevelopment
+          source location: user@user-PC
+            build variant: default
+
+    building on user-PC, Windows 7/amd64, version 6.1
+    using Java VM 'Java HotSpot(TM) 64-Bit Server VM', version 25.91-b15 (Oracle Corporation)
+    build started at 2017-03-31 15:35:50 GMT+05:30 (IST)
+
+    Build Plugin 'EnterpriseApplicationPlugin', Version 7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:04:43 +0100, CL212848)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def                                   7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:17 +0100, CL212848)
+    sap.com:tc/bi/bp/enterpriseApplication#enterpriseApplication 7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:04:43 +0100, CL212848)
+    sap.com:tc/bi/core#def                                       7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:07:56 +0100, CL212848)
+    sap.com:tc/bi/exception#def                                  7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:16 +0100, CL212848)
+    sap.com:tc/bi/extddicdb#def                                  7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:20 +0100, CL212848)
+    sap.com:tc/bi/extsql#def                                     7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:18 +0100, CL212848)
+    sap.com:tc/bi/framework#def                                  7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:01:23 +0100, CL212848)
+    sap.com:tc/bi/i18n#def                                       7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:12 +0100, CL212848)
+    sap.com:tc/bi/javatech#def                                   7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:02:37 +0100, CL212848)
+    sap.com:tc/bi/jdoc#def                                       7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:16 +0100, CL212848)
+    sap.com:tc/bi/jdoc/util#def                                  7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:02:18 +0100, CL212848)
+    sap.com:tc/bi/jlincbs#def                                    7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:27 +0100, CL212848)
+    sap.com:tc/bi/settings#version                               7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:04:03 +0100, CL212848)
+    sap.com:tc/bi/util#util                                      7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:01:46 +0100, CL212848)
+    sap.com:tc/bi/velocity#def                                   7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:11 +0100, CL212848)
+    sap.com:tc/bi/xml#def                                        7.30 SP 3 (NW750CORE_03_REL, built on 2016-03-23 21:06:12 +0100, CL212848)
+ -->
+<project name="DC Deploy build"
+         default="packDeployArchive"
+         basedir=".">
+<taskdef name="jarsap" classname="com.sap.sdm.ant.JarSAP"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="srcpacker" classname="com.sap.tc.buildplugin.ant.taskdefs.SourceArchiveCreatorTask"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<property name="dtr-workspace" value="user@user-PC"/>
+
+<target name="packDeployArchive">
+<copy todir="E:\softwares\EXPC.jdi\LocalDevelopment\t\15176E131A963AFABC9123866BAF5071\sda\META-INF">
+<fileset dir="E:\softwares\EXPC.jdi\LocalDevelopment\DCs\demo.sap.com\test\ejb\app\_comp\META-INF"/>
+</copy>
+<timer/>
+<srcpacker destination="E:\softwares\EXPC.jdi\LocalDevelopment\t\15176E131A963AFABC9123866BAF5071\sda\src.zip" archiveLocation="srcarchive">
+<usedpublicpart dcname="test/ejb"
+                dcvendor="demo.sap.com"
+                ppname="ejbjar"/>
+</srcpacker>
+<timer message="Source archive creation finished in "/>
+<timer/>
+<jarsap jarfile="E:\softwares\EXPC.jdi\LocalDevelopment\t2\15176E131A963AFABC9123866BAF5071\default\deploy\demo.sap.com~test~ejb~app.ear" deployfile="E:\softwares\EXPC.jdi\LocalDevelopment\t\15176E131A963AFABC9123866BAF5071\sda\META-INF\sda-dd.xml">
+<component vendor="demo.sap.com"
+           name="test/ejb/app"
+           location="localDevelopment"
+           counter="20170331100550"
+           scvendor="demo.sap.com"
+           scname="MyComponents"/>
+<fileset dir="E:\softwares\EXPC.jdi\LocalDevelopment\t\15176E131A963AFABC9123866BAF5071\sda">
+<exclude name="**/*~"/>
+<exclude name="**/%*%"/>
+<exclude name="**/.#*"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/SCCS/**"/>
+</fileset>
+<fileset dir="E:\softwares\EXPC.jdi\LocalDevelopment\DCs\demo.sap.com\test\ejb\_comp\gen\default\public\ejbjar\lib\java">
+<include name="demo.sap.com~test~ejb.jar"/>
+<exclude name="**/*~"/>
+<exclude name="**/%*%"/>
+<exclude name="**/.#*"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/SCCS/**"/>
+</fileset>
+</jarsap>
+<timer message="JarSAP finished in "/>
+</target>
+</project>
